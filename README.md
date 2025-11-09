@@ -67,9 +67,13 @@ Apenas um membro de cada grupo deverá entregar, obrigatoriamente, três arquivo
 Observações importantes:
 
 • Vocês podem usar e criar quaisquer ferramentas para interpretar os dados recebidos e gerar a ontologia, contanto que a ontologia final esteja no formato OWL (sintaxe RDF/XML), contenha as entidades necessárias (conceitos, propriedades e todos os indivíduos) e possa ser aberta pelo Protégé. Projetos entregues sem algum dos três arquivos pedidos ou contendo uma ontologia em formato incompatível ou sem indivíduos não serão considerados.
+
 • Ontologias externas devem ser referenciadas (em direct imports na aba principal do Protégé) e seu conteúdo não deve ser replicado na ontologia. Isto significa que a ontologia não deve ser criada editando o arquivo da FOAF e não pode ter o mesmo URI que a FOAF ou outra ontologia utilizada.
+
 • Serão consideradas apenas as queries SPARQL que estiverem no arquivo TXT e cujos respectivos valores dos parâmetros e resultados estiverem no arquivo PDF. Os valores dos parâmetros devem ser escolhidos de modo que os resultados não sejam vazios. Opcionalmente, as queries podem também constar no arquivo PDF, mas é obrigatório que estejam no arquivo TXT. Consultas que utilizarem prefixos não declarados no arquivo TXT também não serão consideradas.
+
 • As informações fornecidas no relatório não podem ser inconsistentes com o conteúdo da ontologia entregue: os conceitos, propriedades e indivíduos mencionados no relatório devem obrigatoriamente fazer parte da ontologia, e os resultados das consultas devem ser reprodutíveis.
+
 • A entrega de todos os arquivos deve ser feita por apenas um integrante de cada grupo. 
 
 Discussões no fórum são fortemente incentivadas!
