@@ -19,10 +19,10 @@ Vocês devem criar uma ontologia no Protégé para representar conceitos relevan
 4. Quais **filmes** do diretor do filme F possuem X ou Y como atores, com as respectivas **durações** em ordem crescente?
 5. Quais **pessoas** atuaram em um **filme** e dirigiram algum **filme** (não necessariamente o mesmo filme, mas obrigatoriamente a mesma pessoa)?
 6. Quais **diretores** dirigiram algum **filme** em um **ano** entre os anos N1 e N2 ,  em que os atores X e Y aparecem, do mais antigo para o mais novo?
-7. Quais pares formados por uma **atriz** e um **ator<u/> atuaram juntos em algum **filme** de **duração** entre M1 e M2 ?
-8. Qual o **diretor<u/> que mais dirigiu filmes em que aparece o ator de primeiro nome Xp e último nome Xu ?
-9. Qual o **filme<u/> mais antigo em que o ator X atuou, em que **ano<u/> foi lançado e qual era seu **personagem<u/>? Havendo empate, devolver todos do mesmo ano.
-10. Qual o **filme<u/> mais longo dirigido por D, e qual a sua **duração<u/>? Havendo empate, devolver todos da mesma duração.
+7. Quais pares formados por uma **atriz** e um **ator** atuaram juntos em algum **filme** de **duração** entre M1 e M2 ?
+8. Qual o **diretor** que mais dirigiu filmes em que aparece o ator de primeiro nome Xp e último nome Xu ?
+9. Qual o **filme** mais antigo em que o ator X atuou, em que **ano** foi lançado e qual era seu **personagem**? Havendo empate, devolver todos do mesmo ano.
+10. Qual o **filme** mais longo dirigido por D, e qual a sua **duração**? Havendo empate, devolver todos da mesma duração.
 
 Sua ontologia deve ser baseada nos conceitos e propriedades descritos pela ontologia FOAF (Friend of a Friend). A versão que deve ser usada está disponível em: http://xmlns.com/foaf/spec/index.rdf.  Por enquanto, usaremos a versão guardada em https://web.archive.org/web/20211024051123/http://xmlns.com/foaf/spec/index.rdf. Em particular, vocês devem utilizar todos os itens abaixo:
 
@@ -52,7 +52,7 @@ A fase final do projeto consiste em fazer as consultas referentes às questões 
 
 Não há suposição de que X e Y sejam distintos, e os termos “ator” e “diretor” nas perguntas abrangem quaisquer gêneros.
 
-Os termos **sublinhados<u/> indicam as colunas que devem constar na resposta. As figuras abaixo exemplificam o formato esperado de saída das consultas.
+Os termos **sublinhados** indicam as colunas que devem constar na resposta. As figuras abaixo exemplificam o formato esperado de saída das consultas.
 
 Os parâmetros Ft , Xp e Xu das consultas 2 e 8 devem ser fornecidos como strings. Os parâmetros N1, N2, M1 e M2 das consultas 6 e 7 devem ser fornecidos como números inteiros. Os demais parâmetros (F , X, Y e D) devem ser os identificadores dos indivíduos na ontologia, preferencialmente prefixados (a fim de evitar a repetição do URI).
 
