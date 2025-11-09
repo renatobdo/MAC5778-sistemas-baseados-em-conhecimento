@@ -4,7 +4,7 @@ Repositório para o projeto
 # Projeto
 Projeto
 Condições de conclusão
-Vencimento: domingo, 30 nov. 2025, 23:59
+**Vencimento: domingo, 30 nov. 2025, 23:59**
 
 O objetivo deste projeto é familiarizar vocês com as ferramentas para construção de ontologias e consultas.
 O trabalho pode ser feito em grupos de até 4 alunos (Fórmula em lógica de descrição indicando que os grupos têm no máximo quatro integrantes.).
@@ -13,16 +13,16 @@ O trabalho pode ser feito em grupos de até 4 alunos (Fórmula em lógica de des
 
 Vocês devem criar uma ontologia no Protégé para representar conceitos relevantes ao mundo do cinema. A ontologia deve conter no mínimo os conceitos Filme, Ator, Diretor e Personagem. Outros conceitos podem (e devem) ser criados conforme a necessidade, bem como relações (object properties e data properties). Exemplos de relações: Ator atua em Filme, Diretor dirige Filme e Filme tem ano de lançamento. Sua ontologia deve ter conceitos e propriedades suficientes para responder as questões de competência abaixo:
 
-1. Quais os títulos dos filmes que foram dirigidos pelo diretor D, em ordem lexicográfica?
-2. Quais os primeiros nomes e últimos nomes dos atores que participaram do filme de título Ft , em ordem lexicográfica de nome e sobrenome, com seus respectivos personagens?
-3. Em quais filmes os atores X e Y atuaram juntos, com os respectivos diretores e anos de lançamento, do mais novo para o mais antigo?
-4. Quais filmes do diretor do filme F possuem X ou Y como atores, com as respectivas durações em ordem crescente?
-5. Quais pessoas atuaram em um filme e dirigiram algum filme (não necessariamente o mesmo filme, mas obrigatoriamente a mesma pessoa)?
-6. Quais diretores dirigiram algum filme em um ano entre os anos N1 e N2 ,  em que os atores X e Y aparecem, do mais antigo para o mais novo?
-7. Quais pares formados por uma uma atriz e um ator atuaram juntos em algum filme de duração entre M1 e M2 ?
-8. Qual o diretor que mais dirigiu filmes em que aparece o ator de primeiro nome Xp e último nome Xu ?
-9. Qual o filme mais antigo em que o ator X atuou, em que ano foi lançado e qual era seu personagem? Havendo empate, devolver todos do mesmo ano.
-10. Qual o filme mais longo dirigido por D, e qual a sua duração? Havendo empate, devolver todos da mesma duração.
+1. Quais os <u>títulos</u> dos filmes que foram dirigidos pelo diretor D, em ordem lexicográfica?
+2. Quais os <u>primeiros nomes</u> e <u>últimos nomes</u> dos atores que participaram do filme de título Ft , em ordem lexicográfica de nome e sobrenome, com seus respectivos <u>personagens</u>?
+3. Em quais <u>filmes</u> os atores X e Y atuaram juntos, com os respectivos <u>diretores</u> e <u>anos</u> de lançamento, do mais novo para o mais antigo?
+4. Quais <u>filmes</u> do diretor do filme F possuem X ou Y como atores, com as respectivas <u>durações</u> em ordem crescente?
+5. Quais <u>pessoas</u> atuaram em um <u>filme</u> e dirigiram algum <u>filme</u> (não necessariamente o mesmo filme, mas obrigatoriamente a mesma pessoa)?
+6. Quais <u>diretores</u> dirigiram algum <u>filme</u> em um <u>ano</u> entre os anos N1 e N2 ,  em que os atores X e Y aparecem, do mais antigo para o mais novo?
+7. Quais pares formados por uma <u>atriz</u> e um <u>ator<u/> atuaram juntos em algum <u>filme</u> de <u>duração</u> entre M1 e M2 ?
+8. Qual o <u>diretor<u/> que mais dirigiu filmes em que aparece o ator de primeiro nome Xp e último nome Xu ?
+9. Qual o <u>filme<u/> mais antigo em que o ator X atuou, em que <u>ano<u/> foi lançado e qual era seu <u>personagem<u/>? Havendo empate, devolver todos do mesmo ano.
+10. Qual o <u>filme<u/> mais longo dirigido por D, e qual a sua <u>duração<u/>? Havendo empate, devolver todos da mesma duração.
 
 Sua ontologia deve ser baseada nos conceitos e propriedades descritos pela ontologia FOAF (Friend of a Friend). A versão que deve ser usada está disponível em: http://xmlns.com/foaf/spec/index.rdf.  Por enquanto, usaremos a versão guardada em https://web.archive.org/web/20211024051123/http://xmlns.com/foaf/spec/index.rdf. Em particular, vocês devem utilizar todos os itens abaixo:
 
@@ -52,14 +52,14 @@ A fase final do projeto consiste em fazer as consultas referentes às questões 
 
 Não há suposição de que X e Y sejam distintos, e os termos “ator” e “diretor” nas perguntas abrangem quaisquer gêneros.
 
-Os termos sublinhados indicam as colunas que devem constar na resposta. As figuras abaixo exemplificam o formato esperado de saída das consultas.
+Os termos <u>sublinhados<u/> indicam as colunas que devem constar na resposta. As figuras abaixo exemplificam o formato esperado de saída das consultas.
 
 Os parâmetros Ft , Xp e Xu das consultas 2 e 8 devem ser fornecidos como strings. Os parâmetros N1, N2, M1 e M2 das consultas 6 e 7 devem ser fornecidos como números inteiros. Os demais parâmetros (F , X, Y e D) devem ser os identificadores dos indivíduos na ontologia, preferencialmente prefixados (a fim de evitar a repetição do URI).
 
 O que deve ser entregue
 
-Apenas um membro de cada grupo deverá entregar, obrigatoriamente, três arquivos no eDisciplinas:
-1. a ontologia em OWL na sintaxe RDF/XML (entreguem a ontologia construída, não a ontologia inferida pelo reasoner);
+**Apenas um** membro de cada grupo deverá entregar, obrigatoriamente, três arquivos no eDisciplinas:
+1. a ontologia em OWL na sintaxe RDF/XML (entreguem a **ontologia construída**, não a ontologia inferida pelo reasoner);
 2. um arquivo de texto puro (TXT) com as consultas em SPARQL (apenas as queries, não os resultados) e as definições de todos os prefixos utilizados (linhas que começam com PREFIX);
 3. um relatório em formato PDF contendo: a lista dos nomes de todos os integrantes do grupo, preferencialmente da forma como constam no eDisciplinas; descrições e comentários sobre os conceitos, propriedades e instâncias da ontologia; relação entre conceitos/propriedades da ontologia construída e das ontologias referenciadas (como a FOAF);  consultas feitas em SPARQL (com os respectivos resultados e os parâmetros utilizados).
 
