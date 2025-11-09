@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/dinad/ontologies/2025/10projeto/"
+     xml:base="http://www.semanticweb.org/dinad/ontologies/2025/10projeto/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes">
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#atuaEm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#atuaEm">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/made"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#temAtor"/>
+        <rdfs:label xml:lang="en">acts in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#dirige -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#dirige">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/made"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#temDiretor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#Diretor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#Filme"/>
+        <rdfs:label xml:lang="en">directs</rdfs:label>
+        <rdfs:label xml:lang="pt-br">dirige</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#temAnoLancamento -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#temAnoLancamento"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#temAtor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#temAtor">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/maker"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#Filme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#Ator"/>
+        <rdfs:label xml:lang="en">has actor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#temDiretor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#temDiretor">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/maker"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#Filme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#Diretor"/>
+        <rdfs:label xml:lang="en">has director</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/familyName -->
+
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/familyName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#Filme"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#Ator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#Ator">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#Diretor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#Diretor">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#Filme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#Filme"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#Personagem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#Personagem"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
