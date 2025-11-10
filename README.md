@@ -45,6 +45,10 @@ Além da FOAF, existem diversas outras ontologias disponíveis que podem servir 
 
 <img width="1366" height="768" alt="Ontologia_Filmes_OP" src="https://github.com/user-attachments/assets/69291418-70f8-4cbf-94e9-45066b6117b0" />
 
+
+<img width="1366" height="768" alt="Ontologia_Filmes_TR2_diretores" src="https://github.com/user-attachments/assets/b1618fef-d060-4496-87f5-588e83e8f00b" />
+
+
 <img width="1366" height="768" alt="Ontologia_Filmes_OP2" src="https://github.com/user-attachments/assets/7e02387f-cbc8-4b85-8015-e6af0d4ce4c1" />
 
 
