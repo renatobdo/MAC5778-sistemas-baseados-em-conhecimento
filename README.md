@@ -79,7 +79,7 @@ Nesta segunda etapa do projeto, vocês deverão usar o Plugin [Cellfie](https://
 ## Terceira fase
 
 
-A fase final do projeto consiste em fazer as consultas referentes às questões de competência em SPARQL. Nem sempre as consultas funcionam de dentro do Protégé. Fiquem à vontade para usar outras ferramentas para consultas. Minha sugestão é essa aqui, bem simples e funciona para o que precisamos: SPARQL GUI Wrapper
+A fase final do projeto consiste em fazer as consultas referentes às questões de competência em SPARQL. Nem sempre as consultas funcionam de dentro do Protégé. Fiquem à vontade para usar outras ferramentas para consultas. Minha sugestão é essa aqui, bem simples e funciona para o que precisamos: [SPARQL GUI Wrapper](https://github.com/viniciusbm/sparqlguiwrapper)
 
 Não há suposição de que X e Y sejam distintos, e os termos “ator” e “diretor” nas perguntas abrangem quaisquer gêneros.
 
