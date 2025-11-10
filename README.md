@@ -39,10 +39,24 @@ foaf:maker
 O conceito foaf:Person e as propriedades foaf:made e foaf:maker não devem ser instanciados diretamente; em vez disso, as instâncias devem utilizar subconceitos e subpropriedades de acordo com o tipo de indivíduo ou relação.
 Além da FOAF, existem diversas outras ontologias disponíveis que podem servir de inspiração e cujos elementos podem ser referenciados na ontologia de vocês. Sintam-se à vontade para compartilhar ontologias públicas encontradas no fórum de discussões.
 
+## Print com a ontologia
+
+<img width="1366" height="768" alt="Ontologia_Filmes" src="https://github.com/user-attachments/assets/a66a31e8-2a5f-4536-aa62-c4a8be15d46e" />
+
+<img width="1366" height="768" alt="Ontologia_Filmes_OP" src="https://github.com/user-attachments/assets/69291418-70f8-4cbf-94e9-45066b6117b0" />
+
+<img width="1366" height="768" alt="Ontologia_Filmes_DP" src="https://github.com/user-attachments/assets/ae7da5b0-43b5-4267-9a13-9c2c709af425" />
+
+
 ## Segunda fase
 
 
 Nesta segunda etapa do projeto, vocês deverão usar o Plugin [Cellfie](https://github.com/protegeproject/cellfie-plugin) com a planilha de dados sobre [filmes](https://github.com/renatobdo/MAC5778-sistemas-baseados-em-conhecimento/blob/main/filmes.xlsx) disponibilizada. A ideia é criar as regras necessárias para popular as classes criadas na etapa anterior (Filme, Ator, Diretor e Personagem). 
+
+## Regra de transformação para os filmes:
+<img width="1366" height="768" alt="1" src="https://github.com/user-attachments/assets/1cdffba3-7d25-4c68-812e-df923de49932" />
+
+
 
 
 ## Terceira fase
