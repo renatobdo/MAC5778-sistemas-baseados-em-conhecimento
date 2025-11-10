@@ -67,7 +67,11 @@ Nesta segunda etapa do projeto, vocês deverão usar o Plugin [Cellfie](https://
 <img width="1366" height="768" alt="Ontologia_Filmes_TR2_diretores" src="https://github.com/user-attachments/assets/b1618fef-d060-4496-87f5-588e83e8f00b" />
 
 
-<img width="1185" height="703" alt="Ontologia_Filmes_TR3_atores" src="https://github.com/user-attachments/assets/073f2c44-8d86-4b2e-948c-c153aa716905" />
+<img width="1366" height="768" alt="Ontologia_Filmes_TR3_atores" src="https://github.com/user-attachments/assets/1f39fe75-4c1c-4647-ad94-ba88d6eec3d1" />
+
+<img width="1366" height="768" alt="Ontologia_Filmes_TR3_atrizes" src="https://github.com/user-attachments/assets/cf268c06-4173-426d-b450-59f6b4ead259" />
+
+
 
 
 
