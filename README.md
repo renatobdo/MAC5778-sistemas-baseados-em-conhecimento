@@ -54,7 +54,8 @@ Além da FOAF, existem diversas outras ontologias disponíveis que podem servir 
 Nesta segunda etapa do projeto, vocês deverão usar o Plugin [Cellfie](https://github.com/protegeproject/cellfie-plugin) com a planilha de dados sobre [filmes](https://github.com/renatobdo/MAC5778-sistemas-baseados-em-conhecimento/blob/main/filmes.xlsx) disponibilizada. A ideia é criar as regras necessárias para popular as classes criadas na etapa anterior (Filme, Ator, Diretor e Personagem). 
 
 ## Regra de transformação para os filmes:
-<img width="1366" height="768" alt="1" src="https://github.com/user-attachments/assets/1cdffba3-7d25-4c68-812e-df923de49932" />
+<img width="1366" height="768" alt="Ontologia_Filmes_TR" src="https://github.com/user-attachments/assets/41e53d8e-3086-4da8-a774-f3ee1360cd8b" />
+
 
 
 
