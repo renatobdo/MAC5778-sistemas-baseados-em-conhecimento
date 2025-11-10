@@ -46,9 +46,6 @@ Além da FOAF, existem diversas outras ontologias disponíveis que podem servir 
 <img width="1366" height="768" alt="Ontologia_Filmes_OP" src="https://github.com/user-attachments/assets/69291418-70f8-4cbf-94e9-45066b6117b0" />
 
 
-<img width="1366" height="768" alt="Ontologia_Filmes_TR2_diretores" src="https://github.com/user-attachments/assets/b1618fef-d060-4496-87f5-588e83e8f00b" />
-
-
 <img width="1366" height="768" alt="Ontologia_Filmes_OP2" src="https://github.com/user-attachments/assets/7e02387f-cbc8-4b85-8015-e6af0d4ce4c1" />
 
 
@@ -65,6 +62,9 @@ Nesta segunda etapa do projeto, vocês deverão usar o Plugin [Cellfie](https://
 
 
 <img width="1366" height="768" alt="Ontologia_Filmes_FilmesIndividuals" src="https://github.com/user-attachments/assets/98250390-2c98-4047-98d1-2ca0da3106f0" />
+
+
+<img width="1366" height="768" alt="Ontologia_Filmes_TR2_diretores" src="https://github.com/user-attachments/assets/b1618fef-d060-4496-87f5-588e83e8f00b" />
 
 
 <img width="1185" height="703" alt="Ontologia_Filmes_TR3_atores" src="https://github.com/user-attachments/assets/073f2c44-8d86-4b2e-948c-c153aa716905" />
