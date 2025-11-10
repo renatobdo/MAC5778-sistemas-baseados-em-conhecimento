@@ -59,7 +59,11 @@ Nesta segunda etapa do projeto, vocês deverão usar o Plugin [Cellfie](https://
 ## Regra de transformação para os filmes:
 <img width="1366" height="768" alt="Ontologia_Filmes_TR" src="https://github.com/user-attachments/assets/41e53d8e-3086-4da8-a774-f3ee1360cd8b" />
 
+
 <img width="1366" height="768" alt="Ontologia_Filmes_FilmesIndividuals" src="https://github.com/user-attachments/assets/98250390-2c98-4047-98d1-2ca0da3106f0" />
+
+
+<img width="1185" height="703" alt="Ontologia_Filmes_TR3_atores" src="https://github.com/user-attachments/assets/073f2c44-8d86-4b2e-948c-c153aa716905" />
 
 
 
