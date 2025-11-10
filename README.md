@@ -42,7 +42,7 @@ Além da FOAF, existem diversas outras ontologias disponíveis que podem servir 
 ## Segunda fase
 
 
-Nesta segunda etapa do projeto, vocês deverão usar o Plugin [Cellfie](https://github.com/protegeproject/cellfie-plugin) com a planilha de dados sobre filmes disponibilizada. A ideia é criar as regras necessárias para popular as classes criadas na etapa anterior (Filme, Ator, Diretor e Personagem). 
+Nesta segunda etapa do projeto, vocês deverão usar o Plugin [Cellfie](https://github.com/protegeproject/cellfie-plugin) com a planilha de dados sobre [filmes](https://github.com/renatobdo/MAC5778-sistemas-baseados-em-conhecimento/blob/main/filmes.xlsx) disponibilizada. A ideia é criar as regras necessárias para popular as classes criadas na etapa anterior (Filme, Ator, Diretor e Personagem). 
 
 
 ## Terceira fase
