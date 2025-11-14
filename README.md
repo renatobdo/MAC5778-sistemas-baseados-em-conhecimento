@@ -132,7 +132,7 @@ WHERE {
   BIND("Lost in Translation" AS ?Ft) 
   ?f a :Filme ; :titulo ?Ft .
 
-  { ?p :atuaEm ?f } UNION { ?f :temElenco ?p } UNION { ?p :atuaEn ?f }  # robusto
+  { ?p :atuaEm ?f } UNION { ?f :temElenco ?p } UNION { ?p :atuaEn ?f }
   ?p foaf:firstName ?firstName ; foaf:familyName ?familyName .
 
   OPTIONAL {
