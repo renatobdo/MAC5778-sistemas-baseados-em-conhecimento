@@ -124,5 +124,25 @@ WHERE {
 ORDER BY STR(?titulo)
 ```
 
+2. Quais os **primeiros nomes** e **últimos nomes** dos atores que participaram do filme de título Ft , em ordem lexicográfica de nome e sobrenome, com seus respectivos **personagens**?
+
+```
+SELECT DISTINCT ?firstName ?familyName ?personagem
+WHERE {
+  BIND("Lost in Translation" AS ?Ft) 
+  ?f a :Filme ; :titulo ?Ft .
+
+  { ?p :atuaEm ?f } UNION { ?f :temElenco ?p } UNION { ?p :atuaEn ?f }  # robusto
+  ?p foaf:firstName ?firstName ; foaf:familyName ?familyName .
+
+  OPTIONAL {
+    ?ch a :Personagem ; :interpretadoPor ?p ; :apareceEm ?f ;
+        :nomePersonagem ?personagem .
+  }
+}
+ORDER BY STR(?firstName) STR(?familyName)
+```
+
+
 
 
