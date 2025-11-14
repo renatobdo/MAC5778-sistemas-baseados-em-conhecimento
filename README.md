@@ -111,15 +111,18 @@ Discussões no fórum são fortemente incentivadas!
 
 <img width="1206" height="566" alt="Consulta" src="https://github.com/user-attachments/assets/4fcd349d-8349-4bf4-97aa-8b3b83aa17b6" />
 
+**Queries**
 
 1. Quais os **títulos** dos filmes que foram dirigidos pelo diretor D, em ordem lexicográfica?
+```
 SELECT ?titulo
 WHERE {
   BIND(:diretor_sofia_coppola AS ?D) 
   ?f :temDiretor ?D ;
      :titulo ?titulo .
 }
-ORDER BY STR(?titulo) 
+ORDER BY STR(?titulo)
+```
 
 
 
