@@ -113,11 +113,13 @@ Discussões no fórum são fortemente incentivadas!
 <img width="1206" height="566" alt="Consulta" src="https://github.com/user-attachments/assets/4fcd349d-8349-4bf4-97aa-8b3b83aa17b6" />
 
 
-Rodar o servidor apache jena:
+**Rodar o servidor apache jena:**
+cd C:\testes\apache-jena-fuseki-5.6.0\apache-jena-fuseki-5.6.0
+fuseki-server.bat --mem /projeto
 
 <img width="963" height="116" alt="ApacheJenaServer" src="https://github.com/user-attachments/assets/edd4a9bd-9aeb-4ef4-a842-1b08ef578ee6" />
 
-Página do servidor:
+**Página do servidor:**
 
 <img width="1333" height="685" alt="ApacheJenaServer2" src="https://github.com/user-attachments/assets/3a18ebe6-6dd2-426f-aeb1-0769e006feb3" />
 
