@@ -122,6 +122,9 @@ Página do servidor:
 <img width="1333" height="685" alt="ApacheJenaServer2" src="https://github.com/user-attachments/assets/3a18ebe6-6dd2-426f-aeb1-0769e006feb3" />
 
 
+
+
+
 **Queries**
 
 1. Quais os **títulos** dos filmes que foram dirigidos pelo diretor D, em ordem lexicográfica?
