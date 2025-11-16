@@ -123,6 +123,11 @@ fuseki-server.bat --mem /projeto
 
 <img width="1333" height="685" alt="ApacheJenaServer2" src="https://github.com/user-attachments/assets/3a18ebe6-6dd2-426f-aeb1-0769e006feb3" />
 
+**Upload da ontologia para o Apache Jena**
+É necessário salvar com o formato turtle .ttl. Depois é só fazer o upload para o apache jena.
+
+<img width="1366" height="768" alt="UploadOntologia" src="https://github.com/user-attachments/assets/1ea9ca5d-f938-4f45-90e0-95624646db96" />
+
 
 
 
