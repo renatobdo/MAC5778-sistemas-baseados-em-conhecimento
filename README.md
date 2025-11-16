@@ -109,13 +109,13 @@ Observações importantes:
 
 Discussões no fórum são fortemente incentivadas!
 
+
+<img width="1206" height="566" alt="Consulta" src="https://github.com/user-attachments/assets/4fcd349d-8349-4bf4-97aa-8b3b83aa17b6" />
+
+
 Rodar o servidor apache jena:
 
 <img width="963" height="116" alt="ApacheJenaServer" src="https://github.com/user-attachments/assets/edd4a9bd-9aeb-4ef4-a842-1b08ef578ee6" />
-
-
-
-<img width="1206" height="566" alt="Consulta" src="https://github.com/user-attachments/assets/4fcd349d-8349-4bf4-97aa-8b3b83aa17b6" />
 
 **Queries**
 
