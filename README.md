@@ -145,6 +145,26 @@ WHERE {
 ORDER BY STR(?titulo)
 ```
 
+ou
+
+```
+PREFIX pf:   <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?titulo
+WHERE {
+  VALUES (?dirFirst ?dirLast) { ("Sofia" "Coppola") }
+
+  ?diretor a pf:Diretor ;
+           foaf:firstName ?dirFirst ;
+           foaf:familyName ?dirLast ;
+           pf:dirige ?filme .
+
+  ?filme pf:temTitulo ?titulo .
+}
+ORDER BY LCASE(?titulo)
+```
+
 2. Quais os **primeiros nomes** e **últimos nomes** dos atores que participaram do filme de título Ft , em ordem lexicográfica de nome e sobrenome, com seus respectivos **personagens**?
 
 ```
