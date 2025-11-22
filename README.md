@@ -361,3 +361,29 @@ WHERE {
 }
 ORDER BY STR(?titulo)
 ```
+
+10. Qual o **filme** mais longo dirigido por D, e qual a sua **duração**? Havendo empate, devolver todos da mesma duração.
+
+```
+SELECT ?titulo ?duracao
+WHERE {
+  ?f a :Filme ;
+     :temDiretor ?D ;
+     :titulo ?titulo ;
+     :duracaoMinutos ?duracao .
+
+  {
+    SELECT ?D (MAX(?duracao2) AS ?durMax)
+    WHERE {
+      ?f2 a :Filme ;
+          :temDiretor ?D ;
+          :duracaoMinutos ?duracao2 .
+    }
+    GROUP BY ?D
+  }
+
+  FILTER (?duracao = ?durMax)
+  FILTER (?D = :diretor_sofia_coppola)
+}
+ORDER BY STR(?titulo)
+```
