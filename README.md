@@ -210,5 +210,23 @@ WHERE {
 ORDER BY DESC(?ano) STR(?titulo)
 ```
 
+5. Quais **pessoas** atuaram em um **filme** e dirigiram algum **filme** (não necessariamente o mesmo filme, mas obrigatoriamente a mesma pessoa)?
+
+```
+SELECT DISTINCT ?firstName ?familyName
+WHERE {
+  ?ator a ?tipoA ;
+        :atuaEm ?filmeAtor ;
+        foaf:firstName  ?firstName ;
+        foaf:familyName ?familyName .
+  ?tipoA rdfs:subClassOf* :Interprete .
+
+  ?filmeDiretor :temDiretor ?dir .
+  ?dir a :Diretor ;
+       foaf:firstName  ?firstName ;
+       foaf:familyName ?familyName .
+}
+ORDER BY ?familyName ?firstName
+```
 
 
