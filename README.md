@@ -310,3 +310,24 @@ WHERE {
 ORDER BY STR(?atrizFirst) STR(?atrizFamily) STR(?atorFirst) STR(?atorFamily)
 ```
 
+8. Qual o **diretor** que mais dirigiu filmes em que aparece o ator de primeiro nome Xp e último nome Xu ?
+
+```
+SELECT ?dirFirstName ?dirFamilyName (COUNT(DISTINCT ?f) AS ?numFilmes)
+WHERE {
+  ?ator a :Ator ;
+        foaf:firstName  "John" ;
+        foaf:familyName "Goodman" ;
+        :atuaEm ?f .
+
+  ?f a :Filme ;
+     :temDiretor ?dir .
+
+  ?dir a :Diretor ;
+       foaf:firstName  ?dirFirstName ;
+       foaf:familyName ?dirFamilyName .
+}
+GROUP BY ?dir ?dirFirstName ?dirFamilyName
+ORDER BY DESC(?numFilmes)
+LIMIT 1
+```
