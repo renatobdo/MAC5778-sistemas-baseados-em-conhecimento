@@ -216,8 +216,6 @@ ORDER BY DESC(?ano) STR(?titulo)
 SELECT DISTINCT ?titulo ?duracao
 WHERE {
   BIND(:filme_the_godfather AS ?F)
-
-  # diretor de F
   ?F a :Filme ;
      :temDiretor ?D .
 
