@@ -184,6 +184,31 @@ WHERE {
 ORDER BY STR(?firstName) STR(?familyName)
 ```
 
+3. Em quais **filmes** os atores X e Y atuaram juntos, com os respectivos **diretores** e **anos** de lançamento, do mais novo para o mais antigo?
+```
+SELECT DISTINCT ?titulo ?ano ?dirFirstName ?dirFamilyName
+WHERE {
+  ?X a :Ator ;
+     foaf:firstName  "Al" ;
+     foaf:familyName "Pacino" ;
+     :atuaEm ?f .
+
+  ?Y a :Atriz ;
+     foaf:firstName  "Diane" ;
+     foaf:familyName "Keaton" ;
+     :atuaEm ?f .
+
+  ?f a :Filme ;
+     :titulo        ?titulo ;
+     :anoLancamento ?ano ;
+     :temDiretor    ?dir .
+
+  ?dir a :Diretor ;
+       foaf:firstName  ?dirFirstName ;
+       foaf:familyName ?dirFamilyName .
+}
+ORDER BY DESC(?ano) STR(?titulo)
+```
 
 
 
