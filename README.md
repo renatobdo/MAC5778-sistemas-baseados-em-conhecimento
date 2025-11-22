@@ -255,4 +255,32 @@ WHERE {
 ORDER BY ?familyName ?firstName
 ```
 
+6. Quais **diretores** dirigiram algum **filme** em um **ano** entre os anos N1 e N2 ,  em que os atores X e Y aparecem, do mais antigo para o mais novo?
+
+```
+SELECT DISTINCT ?dirFirstName ?dirFamilyName ?titulo ?ano
+WHERE {
+  BIND(2003 AS ?N1)
+  BIND(2008 AS ?N2)
+
+  BIND(:p_scarlett_johansson AS ?X)
+  BIND(:p_tom_wilkinson      AS ?Y)
+
+  ?f a :Filme ;
+     :titulo        ?titulo ;
+     :anoLancamento ?ano ;
+     :temDiretor    ?dir .
+
+  FILTER(?ano >= ?N1 && ?ano <= ?N2)
+
+  ?X :atuaEm ?f .
+  ?Y :atuaEm ?f .
+
+  ?dir a :Diretor ;
+       foaf:firstName  ?dirFirstName ;
+       foaf:familyName ?dirFamilyName .
+}
+ORDER BY ?ano STR(?titulo)
+```
+
 
