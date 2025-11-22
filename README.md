@@ -331,3 +331,33 @@ GROUP BY ?dir ?dirFirstName ?dirFamilyName
 ORDER BY DESC(?numFilmes)
 LIMIT 1
 ```
+
+9. Qual o **filme** mais antigo em que o ator X atuou, em que **ano** foi lançado e qual era seu **personagem**? Havendo empate, devolver todos do mesmo ano.
+
+```
+SELECT ?titulo ?ano ?nomePersonagem
+WHERE {
+  {
+    SELECT (MIN(?ano0) AS ?anoMin)
+    WHERE {
+      ?pers0 a :Personagem ;
+             :interpretadoPor :p_gillian_welch ;
+             :apareceEm ?f0 .
+      ?f0 a :Filme ;
+          :anoLancamento ?ano0 .
+    }
+  }
+
+  ?pers a :Personagem ;
+        :interpretadoPor :p_gillian_welch ;
+        :apareceEm ?f ;
+        :nomePersonagem ?nomePersonagem .
+
+  ?f a :Filme ;
+     :titulo        ?titulo ;
+     :anoLancamento ?ano .
+
+  FILTER(?ano = ?anoMin)
+}
+ORDER BY STR(?titulo)
+```
