@@ -282,5 +282,31 @@ WHERE {
 }
 ORDER BY ?ano STR(?titulo)
 ```
+7. Quais pares formados por uma **atriz** e um **ator** atuaram juntos em algum **filme** de **duração** entre M1 e M2 ?
 
+```
+SELECT DISTINCT
+       ?atrizFirst ?atrizFamily
+       ?atorFirst  ?atorFamily
+WHERE {
+  BIND(90  AS ?M1)
+  BIND(120 AS ?M2)
+
+  ?filme a :Filme ;
+         :duracaoMinutos ?duracao .
+
+  FILTER(?duracao >= ?M1 && ?duracao <= ?M2)
+
+  ?atriz a :Atriz ;
+         :atuaEm ?filme ;
+         foaf:firstName  ?atrizFirst ;
+         foaf:familyName ?atrizFamily .
+
+  ?ator  a :Ator ;
+         :atuaEm ?filme ;
+         foaf:firstName  ?atorFirst ;
+         foaf:familyName ?atorFamily .
+}
+ORDER BY STR(?atrizFirst) STR(?atrizFamily) STR(?atorFirst) STR(?atorFamily)
+```
 
