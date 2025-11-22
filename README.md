@@ -210,6 +210,34 @@ WHERE {
 ORDER BY DESC(?ano) STR(?titulo)
 ```
 
+4. Quais **filmes** do diretor do filme F possuem X ou Y como atores, com as respectivas **durações** em ordem crescente?
+
+```
+SELECT DISTINCT ?titulo ?duracao
+WHERE {
+  BIND(:filme_the_godfather AS ?F)
+
+  # diretor de F
+  ?F a :Filme ;
+     :temDiretor ?D .
+
+  BIND(:p_al_pacino    AS ?X)
+  BIND(:p_diane_keaton AS ?Y)
+  ?f a :Filme ;
+     :temDiretor     ?D ;
+     :titulo         ?titulo ;
+     :duracaoMinutos ?duracao .
+  {
+    ?X :atuaEm ?f .
+  }
+  UNION
+  {
+    ?Y :atuaEm ?f .
+  }
+}
+ORDER BY ?duracao STR(?titulo)
+```
+
 5. Quais **pessoas** atuaram em um **filme** e dirigiram algum **filme** (não necessariamente o mesmo filme, mas obrigatoriamente a mesma pessoa)?
 
 ```
