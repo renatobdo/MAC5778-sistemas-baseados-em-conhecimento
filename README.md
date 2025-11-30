@@ -173,6 +173,9 @@ fuseki-server.bat --mem /projeto
 
 <img width="963" height="116" alt="ApacheJenaServer" src="https://github.com/user-attachments/assets/edd4a9bd-9aeb-4ef4-a842-1b08ef578ee6" />
 
+
+## Iniciando a Infraestrutura necessária para as consultas SPARQL
+
 **Página do servidor:**
 
 <img width="1333" height="685" alt="ApacheJenaServer2" src="https://github.com/user-attachments/assets/3a18ebe6-6dd2-426f-aeb1-0769e006feb3" />
