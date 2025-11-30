@@ -59,6 +59,7 @@ Nesta segunda etapa do projeto, vocês deverão usar o Plugin [Cellfie](https://
 
 ## Regras de transformação
 
+
 **Regra de transformação para os filmes**
 
 ```
@@ -70,6 +71,7 @@ Individual: @A* Types: Filme
 
 <img width="420" height="447" alt="Regras_de_Transformacao_filmes_figura1" src="https://github.com/user-attachments/assets/74b10016-38d5-4588-ac8d-2b51c0e42821" />
 
+
 **Regra de transformação para os diretores**
 ```
 Individual: @A* Types: Diretor
@@ -79,6 +81,7 @@ dirige @B*
 ```
 
 <img width="424" height="383" alt="Regras_de_Transformacao_diretores_figura2" src="https://github.com/user-attachments/assets/e7f22557-b31a-41b6-9193-2392888e8558" />
+
 
 **Regra de transformação para os atores**
 ```
@@ -93,6 +96,7 @@ interpreta @C*,
 
 <img width="570" height="350" alt="Regras_de_Transformacao_atores_figura2" src="https://github.com/user-attachments/assets/f920d146-c063-4531-8cc1-5a8bfd816059" />
 
+
 **Regra de transformação para os atrizes**
 ```
 Individual: 
@@ -106,6 +110,7 @@ Individual:
 
 <img width="470" height="343" alt="Regras_de_Transformacao_atrizes_figura1" src="https://github.com/user-attachments/assets/6d14502e-bf42-4c78-bc84-09db340109fc" />
 
+
 **Regra de transformação para os personagens**
 ```
 Individual:
@@ -117,7 +122,7 @@ Individual:
 
 <img width="569" height="335" alt="Regras_de_Transformacao_personagem_figura1" src="https://github.com/user-attachments/assets/4ca6df8e-ac9d-4287-ba29-09b03f5b162a" />
 
-
+**observação importante:** ao realizar essa regra de transformação com o plugin cellfie instalado é importante verificar se o que foi transformado e importado para o protege está correto. Sugiro olhar a planilha excel e fazer filtros e comparar com o que está no protégé.
 
 ## Terceira fase
 
