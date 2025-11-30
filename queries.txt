@@ -1,3 +1,6 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX :    <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
+
 1. 
 SELECT ?titulo
 WHERE {
