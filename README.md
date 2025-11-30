@@ -4,7 +4,7 @@ Repositório para o projeto
 # Projeto
 Projeto
 Condições de conclusão
-**Vencimento: domingo, 30 nov. 2025, 23:59**
+**Vencimento: domingo, 02 dez. 2025, 23:59**
 
 O objetivo deste projeto é familiarizar vocês com as ferramentas para construção de ontologias e consultas.
 O trabalho pode ser feito em grupos de até 4 alunos (Fórmula em lógica de descrição indicando que os grupos têm no máximo quatro integrantes.).
