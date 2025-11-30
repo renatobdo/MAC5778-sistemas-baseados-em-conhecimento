@@ -41,15 +41,21 @@ Além da FOAF, existem diversas outras ontologias disponíveis que podem servir 
 
 ## Print com a ontologia
 
+**Classes**
+
 <img width="1366" height="768" alt="Ontologia_Filmes" src="https://github.com/user-attachments/assets/a66a31e8-2a5f-4536-aa62-c4a8be15d46e" />
 
-<img width="1366" height="768" alt="Ontologia_Filmes_OP" src="https://github.com/user-attachments/assets/69291418-70f8-4cbf-94e9-45066b6117b0" />
 
+**Object Properties**
+
+<img width="1366" height="768" alt="ObjectProperties2" src="https://github.com/user-attachments/assets/96c4b3f0-f4e6-4028-8ab8-4ce6a262a2b6" />
 
 <img width="1366" height="768" alt="Ontologia_Filmes_OP2" src="https://github.com/user-attachments/assets/7e02387f-cbc8-4b85-8015-e6af0d4ce4c1" />
 
+**Data Properties**
 
-<img width="1366" height="768" alt="Ontologia_Filmes_DP" src="https://github.com/user-attachments/assets/ae7da5b0-43b5-4267-9a13-9c2c709af425" />
+<img width="1366" height="768" alt="DataProperties" src="https://github.com/user-attachments/assets/2863e0d7-1163-48d1-b55c-ccb70618619e" />
+
 
 
 ## Segunda fase
