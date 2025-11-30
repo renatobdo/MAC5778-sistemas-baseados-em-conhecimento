@@ -58,18 +58,17 @@ Além da FOAF, existem diversas outras ontologias disponíveis que podem servir 
 Nesta segunda etapa do projeto, vocês deverão usar o Plugin [Cellfie](https://github.com/protegeproject/cellfie-plugin) com a planilha de dados sobre [filmes](https://github.com/renatobdo/MAC5778-sistemas-baseados-em-conhecimento/blob/main/filmes.xlsx) disponibilizada. A ideia é criar as regras necessárias para popular as classes criadas na etapa anterior (Filme, Ator, Diretor e Personagem). 
 
 ## Regra de transformação para os filmes:
-<img width="1366" height="768" alt="Ontologia_Filmes_TR" src="https://github.com/user-attachments/assets/41e53d8e-3086-4da8-a774-f3ee1360cd8b" />
 
+<img width="424" height="383" alt="Regras_de_Transformacao_diretores_figura2" src="https://github.com/user-attachments/assets/e7f22557-b31a-41b6-9193-2392888e8558" />
 
-<img width="1366" height="768" alt="Ontologia_Filmes_FilmesIndividuals" src="https://github.com/user-attachments/assets/98250390-2c98-4047-98d1-2ca0da3106f0" />
+<img width="420" height="447" alt="Regras_de_Transformacao_filmes_figura1" src="https://github.com/user-attachments/assets/74b10016-38d5-4588-ac8d-2b51c0e42821" />
 
+<img width="570" height="350" alt="Regras_de_Transformacao_atores_figura2" src="https://github.com/user-attachments/assets/f920d146-c063-4531-8cc1-5a8bfd816059" />
 
-<img width="1366" height="768" alt="Ontologia_Filmes_TR2_diretores" src="https://github.com/user-attachments/assets/b1618fef-d060-4496-87f5-588e83e8f00b" />
+<img width="569" height="335" alt="Regras_de_Transformacao_personagem_figura1" src="https://github.com/user-attachments/assets/4ca6df8e-ac9d-4287-ba29-09b03f5b162a" />
 
+<img width="470" height="343" alt="Regras_de_Transformacao_atrizes_figura1" src="https://github.com/user-attachments/assets/6d14502e-bf42-4c78-bc84-09db340109fc" />
 
-<img width="1366" height="768" alt="Ontologia_Filmes_TR3_atores" src="https://github.com/user-attachments/assets/1f39fe75-4c1c-4647-ad94-ba88d6eec3d1" />
-
-<img width="1366" height="768" alt="Ontologia_Filmes_TR3_atrizes" src="https://github.com/user-attachments/assets/cf268c06-4173-426d-b450-59f6b4ead259" />
 
 
 
