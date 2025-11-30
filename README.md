@@ -59,19 +59,62 @@ Nesta segunda etapa do projeto, vocês deverão usar o Plugin [Cellfie](https://
 
 ## Regra de transformação para os filmes:
 
-<img width="424" height="383" alt="Regras_de_Transformacao_diretores_figura2" src="https://github.com/user-attachments/assets/e7f22557-b31a-41b6-9193-2392888e8558" />
+
+Regras de transformação
+```
+filmes:
+Regra: Individual: @A* Types: Filme
+   	 Facts: temTitulo @C*,
+                        temAnoLancamento @B*(xsd:integer),
+                        temDuracao @D*(xsd:integer)
+```
 
 <img width="420" height="447" alt="Regras_de_Transformacao_filmes_figura1" src="https://github.com/user-attachments/assets/74b10016-38d5-4588-ac8d-2b51c0e42821" />
+```
+diretores:
+Regra: Individual: @A* Types: Diretor
+Facts:  foaf:firstName @C*,
+    		foaf:familyName @D*,
+dirige @B*
+```
+<img width="424" height="383" alt="Regras_de_Transformacao_diretores_figura2" src="https://github.com/user-attachments/assets/e7f22557-b31a-41b6-9193-2392888e8558" />
+```
+Atores:
+regra:
+Individual: 
+    @A* Types:  Ator
+        Facts:     foaf:firstName @D*,
+            foaf:familyName @E*,    
+            atuaEm @B*,
+interpreta @C*,        
+            temId @F*
+```
 
 <img width="570" height="350" alt="Regras_de_Transformacao_atores_figura2" src="https://github.com/user-attachments/assets/f920d146-c063-4531-8cc1-5a8bfd816059" />
-
-<img width="569" height="335" alt="Regras_de_Transformacao_personagem_figura1" src="https://github.com/user-attachments/assets/4ca6df8e-ac9d-4287-ba29-09b03f5b162a" />
+```
+Atrizes
+Regra:
+Individual: 
+    @A* Types:  Ator
+        Facts:     foaf:firstName @D*,
+            foaf:familyName @E*,    
+            atuaEm @B*,
+            interpreta @C*,        
+            temId @F*
+```
 
 <img width="470" height="343" alt="Regras_de_Transformacao_atrizes_figura1" src="https://github.com/user-attachments/assets/6d14502e-bf42-4c78-bc84-09db340109fc" />
+```
+Personagem
+regra:
+Individual:
+    @C* Types: Personagem
+        Facts:    nomePersonagem @C*,
+            ehInterpretadoPor @A*,
+            apareceEm @B*
+```
 
-
-
-
+<img width="569" height="335" alt="Regras_de_Transformacao_personagem_figura1" src="https://github.com/user-attachments/assets/4ca6df8e-ac9d-4287-ba29-09b03f5b162a" />
 
 
 
