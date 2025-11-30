@@ -8,6 +8,8 @@ Condições de conclusão
 
 O objetivo deste projeto é familiarizar vocês com as ferramentas para construção de ontologias e consultas.
 O trabalho pode ser feito em grupos de até 4 alunos (Fórmula em lógica de descrição indicando que os grupos têm no máximo quatro integrantes.).
+Integrantes do grupo: Ariella Aro, Renato Bueno Domingos de Oliveira, Viviani Akemi Kasahara 
+
 
 ## Primeira fase
 
