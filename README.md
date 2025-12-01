@@ -208,11 +208,13 @@ fuseki-server.bat --mem /projeto
 
 
 
+**Obs.: Para as queries abaixo utilizar a ontologia projeto2.rdf. utilizar o prefixo PREFIX : <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>**
 
 **Queries**
 
 1. Quais os **títulos** dos filmes que foram dirigidos pelo diretor D, em ordem lexicográfica?
 ```
+PREFIX : <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
 SELECT ?titulo
 WHERE {
   BIND(:diretor_sofia_coppola AS ?D) 
@@ -245,6 +247,7 @@ ORDER BY LCASE(?titulo)
 2. Quais os **primeiros nomes** e **últimos nomes** dos atores que participaram do filme de título Ft , em ordem lexicográfica de nome e sobrenome, com seus respectivos **personagens**?
 
 ```
+PREFIX : <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
 SELECT DISTINCT ?firstName ?familyName ?personagem
 WHERE {
   BIND("Lost in Translation" AS ?Ft) 
@@ -263,6 +266,7 @@ ORDER BY STR(?firstName) STR(?familyName)
 
 3. Em quais **filmes** os atores X e Y atuaram juntos, com os respectivos **diretores** e **anos** de lançamento, do mais novo para o mais antigo?
 ```
+PREFIX : <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
 SELECT DISTINCT ?titulo ?ano ?dirFirstName ?dirFamilyName
 WHERE {
   ?X a :Ator ;
@@ -290,6 +294,7 @@ ORDER BY DESC(?ano) STR(?titulo)
 4. Quais **filmes** do diretor do filme F possuem X ou Y como atores, com as respectivas **durações** em ordem crescente?
 
 ```
+PREFIX : <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
 SELECT DISTINCT ?titulo ?duracao
 WHERE {
   BIND(:filme_the_godfather AS ?F)
@@ -316,6 +321,7 @@ ORDER BY ?duracao STR(?titulo)
 5. Quais **pessoas** atuaram em um **filme** e dirigiram algum **filme** (não necessariamente o mesmo filme, mas obrigatoriamente a mesma pessoa)?
 
 ```
+PREFIX : <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
 SELECT DISTINCT ?firstName ?familyName
 WHERE {
   ?ator a ?tipoA ;
@@ -335,6 +341,7 @@ ORDER BY ?familyName ?firstName
 6. Quais **diretores** dirigiram algum **filme** em um **ano** entre os anos N1 e N2 ,  em que os atores X e Y aparecem, do mais antigo para o mais novo?
 
 ```
+PREFIX : <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
 SELECT DISTINCT ?dirFirstName ?dirFamilyName ?titulo ?ano
 WHERE {
   BIND(2003 AS ?N1)
@@ -362,6 +369,7 @@ ORDER BY ?ano STR(?titulo)
 7. Quais pares formados por uma **atriz** e um **ator** atuaram juntos em algum **filme** de **duração** entre M1 e M2 ?
 
 ```
+PREFIX : <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
 SELECT DISTINCT
        ?atrizFirst ?atrizFamily
        ?atorFirst  ?atorFamily
@@ -390,6 +398,7 @@ ORDER BY STR(?atrizFirst) STR(?atrizFamily) STR(?atorFirst) STR(?atorFamily)
 8. Qual o **diretor** que mais dirigiu filmes em que aparece o ator de primeiro nome Xp e último nome Xu ?
 
 ```
+PREFIX : <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
 SELECT ?dirFirstName ?dirFamilyName (COUNT(DISTINCT ?f) AS ?numFilmes)
 WHERE {
   ?ator a :Ator ;
@@ -412,6 +421,7 @@ LIMIT 1
 9. Qual o **filme** mais antigo em que o ator X atuou, em que **ano** foi lançado e qual era seu **personagem**? Havendo empate, devolver todos do mesmo ano.
 
 ```
+PREFIX : <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
 SELECT ?titulo ?ano ?nomePersonagem
 WHERE {
   {
@@ -442,6 +452,7 @@ ORDER BY STR(?titulo)
 10. Qual o **filme** mais longo dirigido por D, e qual a sua **duração**? Havendo empate, devolver todos da mesma duração.
 
 ```
+PREFIX : <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
 SELECT ?titulo ?duracao
 WHERE {
   ?f a :Filme ;
