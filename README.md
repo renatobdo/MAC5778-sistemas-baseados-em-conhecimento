@@ -247,7 +247,8 @@ ORDER BY LCASE(?titulo)
 2. Quais os **primeiros nomes** e **últimos nomes** dos atores que participaram do filme de título Ft , em ordem lexicográfica de nome e sobrenome, com seus respectivos **personagens**?
 
 ```
-PREFIX : <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
+PREFIX :    <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 SELECT DISTINCT ?firstName ?familyName ?personagem
 WHERE {
   BIND("Lost in Translation" AS ?Ft) 
