@@ -268,6 +268,7 @@ ORDER BY STR(?firstName) STR(?familyName)
 3. Em quais **filmes** os atores X e Y atuaram juntos, com os respectivos **diretores** e **anos** de lançamento, do mais novo para o mais antigo?
 ```
 PREFIX : <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 SELECT DISTINCT ?titulo ?ano ?dirFirstName ?dirFamilyName
 WHERE {
   ?X a :Ator ;
