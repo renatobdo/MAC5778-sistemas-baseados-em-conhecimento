@@ -67,6 +67,17 @@ Nesta segunda etapa do projeto, vocês deverão usar o Plugin [Cellfie](https://
 
 ## Regras de transformação
 
+**A tela para transformação é essa:**
+
+<img width="1366" height="768" alt="TelaImportacaoCellfie" src="https://github.com/user-attachments/assets/73833f27-cfc3-4153-9583-84ca55892906" />
+
+<img width="1366" height="768" alt="TelaImportacaoCellfie2" src="https://github.com/user-attachments/assets/55050889-42ad-473a-b06b-79c5e6dbef02" />
+
+<img width="1366" height="768" alt="TelaImportacaoCellfie3" src="https://github.com/user-attachments/assets/8ed863c6-1d51-4c2c-853b-6bdd15984c12" />
+
+<img width="1366" height="768" alt="TelaImportacaoCellfie4" src="https://github.com/user-attachments/assets/2cebca44-4035-42fb-b6e7-230227b30f5d" />
+
+
 
 **Regra de transformação para os filmes**
 
