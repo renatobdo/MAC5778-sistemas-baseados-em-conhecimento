@@ -29,31 +29,25 @@ WHERE {
 ORDER BY STR(?firstName) STR(?familyName)
 
 3.
-SELECT DISTINCT ?titulo (STR(?ano_str) AS ?ano) ?dirFirstName ?dirFamilyName
+SELECT DISTINCT ?Filme (STR(?anoLanc) AS ?ano) ?Diretor
 WHERE {
-  ?X a :Ator ;
-     foaf:firstName  "Al" ;
-     foaf:familyName "Pacino" ;
-     :atuaEm ?f .
+  BIND(:p_al_pacino AS ?X)
+  BIND(:p_diane_keaton AS ?Y)
 
-  ?Y a :Atriz ;
-     foaf:firstName  "Diane" ;
-     foaf:familyName "Keaton" ;
-     :atuaEm ?f .
+  ?X :atuaEm ?f .
+  ?Y :atuaEm ?f .
 
   ?f a :Filme ;
-     :titulo        ?titulo ;
-     :anoLancamento ?ano_str ;
-     :temDiretor    ?dir .
+     :titulo ?titulo ;
+     :anoLancamento ?anoLanc ;
+     :temDiretor ?Diretor .
 
-  ?dir a :Diretor ;
-       foaf:firstName  ?dirFirstName ;
-       foaf:familyName ?dirFamilyName .
+  BIND(?f AS ?Filme)
 }
-ORDER BY DESC(?ano_str) STR(?titulo)
+ORDER BY DESC(?anoLanc) STR(?Filme)
 
 4.
-SELECT DISTINCT ?titulo (STR(?duracao_str) AS ?duracao)
+SELECT DISTINCT ?Filme (STR(?duracao_str) AS ?duracao)
 WHERE {
   BIND(:filme_the_godfather AS ?F)
   ?F a :Filme ;
@@ -61,10 +55,11 @@ WHERE {
 
   BIND(:p_al_pacino    AS ?X)
   BIND(:p_diane_keaton AS ?Y)
+
   ?f a :Filme ;
      :temDiretor     ?D ;
-     :titulo         ?titulo ;
      :duracaoMinutos ?duracao_str .
+
   {
     ?X :atuaEm ?f .
   }
@@ -72,20 +67,21 @@ WHERE {
   {
     ?Y :atuaEm ?f .
   }
+
+  BIND(?f AS ?Filme)
 }
-ORDER BY ?duracao_str STR(?titulo)
+ORDER BY ?duracao_str STR(?Filme)
+
 
 5.
 SELECT DISTINCT ?Pessoa ?FilmeAt ?FilmeDir
 WHERE {
-  # Pessoa que atua em um filme (ator/atriz)
   ?Pessoa a ?tipoA ;
           :atuaEm ?FilmeAt ;
           foaf:firstName  ?firstName ;
           foaf:familyName ?familyName .
   VALUES ?tipoA { :Ator :Atriz }  
 
-  # Mesma combinação de nome/sobrenome aparecendo como diretor de outro filme
   ?FilmeDir :temDiretor ?dir .
   ?dir a :Diretor ;
        foaf:firstName  ?firstName ;
@@ -94,7 +90,7 @@ WHERE {
 ORDER BY ?Pessoa ?FilmeAt ?FilmeDir
 
 6.
-SELECT DISTINCT ?dirFirstName ?dirFamilyName ?titulo (STR(?ano_str) AS ?ano)
+SELECT DISTINCT ?Filme (STR(?ano) AS ?Ano) ?Diretor
 WHERE {
   BIND(2003 AS ?N1)
   BIND(2008 AS ?N2)
@@ -103,45 +99,49 @@ WHERE {
   BIND(:p_tom_wilkinson      AS ?Y)
 
   ?f a :Filme ;
-     :titulo        ?titulo ;
-     :anoLancamento ?ano_str ;
-     :temDiretor    ?dir .
+     :titulo ?titulo ;
+     :anoLancamento ?ano ;
+     :temDiretor ?Diretor .
 
-  FILTER(?ano_str >= ?N1 && ?ano_str <= ?N2)
+  FILTER(?ano >= ?N1 && ?ano <= ?N2)
 
   ?X :atuaEm ?f .
   ?Y :atuaEm ?f .
 
-  ?dir a :Diretor ;
-       foaf:firstName  ?dirFirstName ;
-       foaf:familyName ?dirFamilyName .
+  BIND(?f AS ?Filme)
 }
-ORDER BY ?ano_str STR(?titulo)
+ORDER BY ?Ano STR(?Filme)
 
 7.
 SELECT DISTINCT
-       ?atrizFirst ?atrizFamily
-       ?atorFirst  ?atorFamily
+       ?Atriz
+       ?Ator
+       ?Filme
+       (STR(?duracao) AS ?Duracao)
 WHERE {
   BIND(90  AS ?M1)
   BIND(120 AS ?M2)
 
-  ?filme a :Filme ;
-         :duracaoMinutos ?duracao .
+  ?f a :Filme ;
+     :titulo ?titulo ;
+     :duracaoMinutos ?duracao .
 
   FILTER(?duracao >= ?M1 && ?duracao <= ?M2)
 
   ?atriz a :Atriz ;
-         :atuaEm ?filme ;
-         foaf:firstName  ?atrizFirst ;
-         foaf:familyName ?atrizFamily .
+         :atuaEm ?f .
 
-  ?ator  a :Ator ;
-         :atuaEm ?filme ;
-         foaf:firstName  ?atorFirst ;
-         foaf:familyName ?atorFamily .
+  ?ator a :Ator ;
+        :atuaEm ?f .
+
+  BIND(?f AS ?Filme)
+  BIND(?atriz AS ?Atriz)
+  BIND(?ator AS ?Ator)
 }
-ORDER BY STR(?atrizFirst) STR(?atrizFamily) STR(?atorFirst) STR(?atorFamily)
+ORDER BY
+  STR(?Atriz)
+  STR(?Ator)
+  STR(?Filme)
 
 8.
 SELECT ?dirFirstName ?dirFamilyName (COUNT(DISTINCT ?f) AS ?numFilmes)
