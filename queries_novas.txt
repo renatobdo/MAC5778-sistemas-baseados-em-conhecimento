@@ -76,20 +76,22 @@ WHERE {
 ORDER BY ?duracao_str STR(?titulo)
 
 5.
-SELECT DISTINCT ?firstName ?familyName
+SELECT DISTINCT ?Pessoa ?FilmeAt ?FilmeDir
 WHERE {
-  ?ator a ?tipoA ;
-        :atuaEm ?filmeAtor ;
-        foaf:firstName  ?firstName ;
-        foaf:familyName ?familyName .
-  ?tipoA rdfs:subClassOf* :Interprete .
+  # Pessoa que atua em um filme (ator/atriz)
+  ?Pessoa a ?tipoA ;
+          :atuaEm ?FilmeAt ;
+          foaf:firstName  ?firstName ;
+          foaf:familyName ?familyName .
+  VALUES ?tipoA { :Ator :Atriz }  
 
-  ?filmeDiretor :temDiretor ?dir .
+  # Mesma combinação de nome/sobrenome aparecendo como diretor de outro filme
+  ?FilmeDir :temDiretor ?dir .
   ?dir a :Diretor ;
        foaf:firstName  ?firstName ;
        foaf:familyName ?familyName .
 }
-ORDER BY ?familyName ?firstName
+ORDER BY ?Pessoa ?FilmeAt ?FilmeDir
 
 6.
 SELECT DISTINCT ?dirFirstName ?dirFamilyName ?titulo (STR(?ano_str) AS ?ano)
