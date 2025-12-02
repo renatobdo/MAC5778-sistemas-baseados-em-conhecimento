@@ -375,6 +375,7 @@ ORDER BY ?ano STR(?titulo)
 
 ```
 PREFIX : <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 SELECT DISTINCT
        ?atrizFirst ?atrizFamily
        ?atorFirst  ?atorFamily
