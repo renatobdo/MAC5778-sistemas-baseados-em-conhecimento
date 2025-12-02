@@ -405,6 +405,7 @@ ORDER BY STR(?atrizFirst) STR(?atrizFamily) STR(?atorFirst) STR(?atorFamily)
 
 ```
 PREFIX : <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 SELECT ?dirFirstName ?dirFamilyName (COUNT(DISTINCT ?f) AS ?numFilmes)
 WHERE {
   ?ator a :Ator ;
