@@ -345,7 +345,8 @@ ORDER BY ?familyName ?firstName
 6. Quais **diretores** dirigiram algum **filme** em um **ano** entre os anos N1 e N2 ,  em que os atores X e Y aparecem, do mais antigo para o mais novo?
 
 ```
-PREFIX : <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
+PREFIX :    <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 SELECT DISTINCT ?dirFirstName ?dirFamilyName ?titulo ?ano
 WHERE {
   BIND(2003 AS ?N1)
