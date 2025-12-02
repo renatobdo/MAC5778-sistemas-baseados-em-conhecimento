@@ -75,6 +75,7 @@ WHERE {
 ORDER BY ?duracao STR(?titulo)
 
 5.
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT DISTINCT ?firstName ?familyName
 WHERE {
   ?ator a ?tipoA ;
