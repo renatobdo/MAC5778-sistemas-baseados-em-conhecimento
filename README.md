@@ -185,6 +185,8 @@ Discussões no fórum são fortemente incentivadas!
 
 <img width="1206" height="566" alt="Consulta" src="https://github.com/user-attachments/assets/4fcd349d-8349-4bf4-97aa-8b3b83aa17b6" />
 
+<img width="1108" height="172" alt="Enunciado_c89e10" src="https://github.com/user-attachments/assets/e31aa860-5fbd-48f6-8d27-c9fe94f0f9bc" />
+
 
 
 ## Iniciando a Infraestrutura necessária para as consultas SPARQL
