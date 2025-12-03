@@ -199,10 +199,12 @@ WHERE {
         :nomePersonagem ?Personagem .
 
   ?f a :Filme ;
-     :titulo        ?Filme ;
+     :titulo        ?titulo ;
      :anoLancamento ?ano_str .
 
   FILTER(?ano_str = ?anoMin)
+
+  BIND(?f AS ?Filme)
 }
 ORDER BY STR(?Filme)
 
