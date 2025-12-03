@@ -491,3 +491,14 @@ WHERE {
 }
 ORDER BY STR(?titulo)
 ```
+
+---
+
+### Correções realizadas nas queries (versão final)
+
+- Queries 3, 4, 6, 9, 10; formatação de números, que apareciam "1990 <link>" no resultado final, agora aparecem "1990";
+- Queries 3, 6, 7; separamos a coluna de "nome" pedida no moodle em colunas de "nome" + "sobrenome"
+- Query 4; titulo aparecia como "Filme Tal" ao invés de "filme_tal" como pedido no moodle
+- Query 5; faltavam colunas de Filme que dirigiu e Filme que atuou;
+- Query 7; faltavam colunas de Filme e Duração
+- Query 8; tirei o número de filmes do resultado (no moodle, só pede nome do diretor)
