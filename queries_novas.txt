@@ -3,33 +3,33 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX : <http://www.semanticweb.org/dinad/ontologies/2025/10/projeto_filmes#>
 
 1. 
-SELECT ?titulo
+SELECT ?TituloDoFilme
 WHERE {
   BIND(:diretor_sofia_coppola AS ?D) 
   ?f :temDiretor ?D ;
-     :titulo ?titulo .
+     :titulo ?TituloDoFilme .
 }
-ORDER BY STR(?titulo)
+ORDER BY STR(?TituloDoFilme)
 
 
 2.
-SELECT DISTINCT ?firstName ?familyName ?personagem
+SELECT DISTINCT ?PrimeiroNome ?UltimoNome ?Personagem
 WHERE {
   BIND("Lost in Translation" AS ?Ft) 
   ?f a :Filme ; :titulo ?Ft .
 
   { ?p :atuaEm ?f } UNION { ?f :temElenco ?p }
-  ?p foaf:firstName ?firstName ; foaf:familyName ?familyName .
+  ?p foaf:firstName ?PrimeiroNome ; foaf:familyName ?UltimoNome .
 
   OPTIONAL {
     ?ch a :Personagem ; :interpretadoPor ?p ; :apareceEm ?f ;
-        :nomePersonagem ?personagem .
+        :nomePersonagem ?Personagem .
   }
 }
-ORDER BY STR(?firstName) STR(?familyName)
+ORDER BY STR(?PrimeiroNome) STR(?UltimoNome)
 
 3.
-SELECT DISTINCT ?Filme (STR(?anoLanc) AS ?ano) ?Diretor
+SELECT DISTINCT ?Filme ?Diretor (STR(?anoLanc) AS ?Ano) 
 WHERE {
   BIND(:p_al_pacino AS ?X)
   BIND(:p_diane_keaton AS ?Y)
@@ -47,7 +47,7 @@ WHERE {
 ORDER BY DESC(?anoLanc) STR(?Filme)
 
 4.
-SELECT DISTINCT ?Filme (STR(?duracao_str) AS ?duracao)
+SELECT DISTINCT ?Filme (STR(?duracao_str) AS ?Duracao)
 WHERE {
   BIND(:filme_the_godfather AS ?F)
   ?F a :Filme ;
@@ -72,7 +72,6 @@ WHERE {
 }
 ORDER BY ?duracao_str STR(?Filme)
 
-
 5.
 SELECT DISTINCT ?Pessoa ?FilmeAt ?FilmeDir
 WHERE {
@@ -90,7 +89,7 @@ WHERE {
 ORDER BY ?Pessoa ?FilmeAt ?FilmeDir
 
 6.
-SELECT DISTINCT ?Filme (STR(?ano) AS ?Ano) ?Diretor
+SELECT DISTINCT (STR(?ano) AS ?Ano) ?Diretor ?Filme
 WHERE {
   BIND(2003 AS ?N1)
   BIND(2008 AS ?N2)
@@ -144,26 +143,44 @@ ORDER BY
   STR(?Filme)
 
 8.
-SELECT ?dirFirstName ?dirFamilyName (COUNT(DISTINCT ?f) AS ?numFilmes)
+SELECT ?Diretor
 WHERE {
-  ?ator a :Ator ;
-        foaf:firstName  "John" ;
-        foaf:familyName "Goodman" ;
-        :atuaEm ?f .
+  {
+    SELECT ?dir (COUNT(DISTINCT ?f) AS ?numFilmes)
+    WHERE {
+      ?ator a :Ator ;
+            foaf:firstName  "John" ;
+            foaf:familyName "Goodman" ;
+            :atuaEm ?f .
 
-  ?f a :Filme ;
-     :temDiretor ?dir .
+      ?f a :Filme ;
+         :temDiretor ?dir .
+    }
+    GROUP BY ?dir
+  }
 
-  ?dir a :Diretor ;
-       foaf:firstName  ?dirFirstName ;
-       foaf:familyName ?dirFamilyName .
+  {
+    SELECT (MAX(?numFilmes) AS ?numMax)
+    WHERE {
+      SELECT ?dir (COUNT(DISTINCT ?f) AS ?numFilmes)
+      WHERE {
+        ?ator a :Ator ;
+              foaf:firstName  "John" ;
+              foaf:familyName "Goodman" ;
+              :atuaEm ?f .
+        ?f :temDiretor ?dir .
+      }
+      GROUP BY ?dir
+    }
+  }
+
+  FILTER(?numFilmes = ?numMax)
+
+  BIND(?dir AS ?Diretor)
 }
-GROUP BY ?dir ?dirFirstName ?dirFamilyName
-ORDER BY DESC(?numFilmes)
-LIMIT 1
 
 9.
-SELECT ?titulo (STR(?ano_str) AS ?ano) ?nomePersonagem
+SELECT ?Filme (STR(?ano_str) AS ?Ano) ?Personagem
 WHERE {
   {
     SELECT (MIN(?ano0) AS ?anoMin)
@@ -179,22 +196,22 @@ WHERE {
   ?pers a :Personagem ;
         :interpretadoPor :p_gillian_welch ;
         :apareceEm ?f ;
-        :nomePersonagem ?nomePersonagem .
+        :nomePersonagem ?Personagem .
 
   ?f a :Filme ;
-     :titulo        ?titulo ;
+     :titulo        ?Filme ;
      :anoLancamento ?ano_str .
 
   FILTER(?ano_str = ?anoMin)
 }
-ORDER BY STR(?titulo)
+ORDER BY STR(?Filme)
 
 10.
-SELECT ?titulo (STR(?duracao_str) AS ?duracao)
+SELECT ?Filme (STR(?duracao_str) AS ?Duracao)
 WHERE {
   ?f a :Filme ;
      :temDiretor ?D ;
-     :titulo ?titulo ;
+     :titulo ?Filme ;
      :duracaoMinutos ?duracao_str .
   {
     SELECT ?D (MAX(?duracao2) AS ?durMax)
