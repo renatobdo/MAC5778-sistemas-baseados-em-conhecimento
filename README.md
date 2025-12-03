@@ -191,7 +191,14 @@ Discussões no fórum são fortemente incentivadas!
 
 ## Iniciando a Infraestrutura necessária para as consultas SPARQL
 
-**Rodar o servidor apache jena:**
+**É possível executar as queries direto pelo Protege e também pelo apache jena**
+
+<img width="1366" height="768" alt="SPARQL-Queries" src="https://github.com/user-attachments/assets/4ed5c1cf-6b8f-4131-92c0-ad8ca18d082d" />
+
+<img width="1366" height="768" alt="SPARQL-Queries2" src="https://github.com/user-attachments/assets/36378001-6bc6-4a87-a19d-c103e52b5f03" />
+
+
+**Para executar as queries pelo Apache Jena devemos rodar o servidor:**
 cd C:\testes\apache-jena-fuseki-5.6.0\apache-jena-fuseki-5.6.0
 fuseki-server.bat --mem /projeto
 
